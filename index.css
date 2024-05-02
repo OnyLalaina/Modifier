@@ -1,0 +1,375 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Arial', sans-serif;
+     scroll-behavior: smooth;
+
+ }
+
+ :root {
+
+     --marron: #452918;
+     --vert: #ADD85E;
+
+ }
+
+
+.dropdown-content .dropdown-item:active {
+    background-color: var(--vert);
+    block-size: 20rem;
+}
+
+ body {
+     width: 100%;
+     height: 150vh;
+
+ }
+
+ .accueil {
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+         url(kerepng.jpg) center/contain;
+     width: 100%;
+     height: 100vh;
+     z-index: -1;
+ }
+
+ nav {
+     position: fixed;
+     width: 100%;
+     height: 100px;
+     background-color: var(--marron);
+     z-index: 1;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5vh;
+     text-align: center;
+ }
+
+ .text-area span {
+     color: white;
+     font-size: 2rem;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+
+ a {
+     text-decoration: none;
+ }
+
+ .lien {
+
+     height: 8vh;
+     padding: 3vh;
+ }
+
+ .lien a {
+     color: white;
+     margin: 5vh;
+     height: 5vh;
+ }
+
+ .lien a:hover {
+     cursor: pointer;
+     color: var(--vert);
+     font-size: large;
+ }
+
+ .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--marron);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent; 
+    min-width: 200px;
+    box-shadow: none; 
+    z-index: 1;
+}
+
+
+.dropdown-content .dropdown-item {
+    color: var(--marron);
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none; 
+    background-color: transparent;
+    transition: background-color 0.3s; 
+}
+
+
+.dropdown-content .dropdown-item:hover {
+    background-color: transparent
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content .dropdown-item:active {
+    background-color: white
+}
+
+
+ .salutation {
+     width: 80%;
+     height: 50vh;
+     text-align: center;
+     margin: auto;
+     padding-top: 50vh;
+
+ }
+
+ .salutation h1 {
+     color: white;
+     font-size: 2.5rem;
+ }
+
+ .click {
+     width: 10vw;
+     height: 5vh;
+     margin-top: 5vh;
+     background-color: transparent;
+     border: 1px var(--vert)solid;
+     color: white;
+     backdrop-filter: blur(50px);
+ }
+
+ .click:hover {
+     transform: scale(1.2);
+     cursor: pointer;
+ }
+
+ footer {
+     width: 100%;
+ }
+
+ .contenu-footer {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     margin: 10vh;
+ }
+
+ .bloc-footer-Informations h3 {
+     color: var(--marron);
+     font-size: 1.5rem;
+     font-weight: bold;
+     margin-bottom: 2vh;
+ }
+
+
+ .icon {
+     margin-top: 5vh;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+
+
+ }
+
+ .icon img {
+     width: 30px;
+ }
+
+ .droit {
+     width: 100%;
+     background-color: var(--marron);
+     height: 15vh;
+     color: white;
+     margin-top: 20vh;
+     text-align: center;
+     padding: 30px 0;
+
+ }
+
+ .droit p {
+     padding-top: 6px;
+ }
+
+ .droit span {
+     color: var(--vert);
+ }
+
+
+ @media screen and (min-width:1920px),
+ (min-height:1080px) {
+     .accueil {
+         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+             url(image/4.jpg)center/cover;
+
+     }
+
+     .text-area span {
+         font-size: 3rem;
+     }
+
+     .lien {
+
+         font-size: 2rem;
+     }
+
+     .click {
+         width: 20%;
+         height: 8vh;
+         font-size: 1.7rem;
+     }
+
+     .bloc-footer-Informations h3 {
+         font-size: 2.3rem;
+     }
+
+     .bloc-footer-Informations p {
+         font-size: 2rem;
+     }
+
+     .icon img {
+         width: 50px;
+     }
+
+     .droit p {
+         font-size: 1.7rem;
+     }
+
+     .droit span {
+         font-size: 1.8rem;
+     }
+ }
+
+ @media screen and (max-width:412px) {
+     .accueil {
+         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+             url(kerepng.jpg)center/cover;
+
+     }
+
+     nav {
+         flex-direction: column;
+         height: 15vh;
+         padding: 0;
+         justify-content: none;
+         
+     }
+
+     .lien  {
+    
+         flex-direction: row;
+         padding: 2vh;
+         height: 10vh;
+         font-size: 1rem;
+         
+     }
+
+     .click {
+         width: 40%;
+     }
+
+     .contenu-footer {
+         flex-direction: column;
+         gap: 5vh;
+         margin-left: 5vh;
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+    .accueil {
+      background-size: cover; 
+    }
+  
+    nav {
+      flex-direction: column;
+      height: auto; 
+      padding: 0 5vh; 
+      justify-content: space-between;
+    }
+  
+    .lien {
+      flex-direction: row;
+      padding: 2vh 5vh; 
+      height: auto; 
+      font-size: 1rem;
+      justify-content: space-around;
+    }
+  
+    .salutation {
+      padding-top: 20vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vh; 
+    }
+  
+    .click {
+      width: 50vw; 
+    }
+  
+    .contenu-footer {
+      flex-direction: column;
+      gap: 5vh;
+      margin: 5vh 0;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; 
+        height: auto; 
+
+    .text-area span {
+        font-size: 1.5rem;
+    }
+
+    .lien {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .lien a {
+        margin: 10px 0; 
+    }
+
+    .salutation {
+        padding-top: 20vh; 
+    }
+
+    .salutation h1 {
+        font-size: 1.5rem; 
+    }
+
+    .click {
+        width: 50%; 
+        margin-top: 20px; 
+    }
+
+    .contenu-footer {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .icon {
+        justify-content: center; 
+    }
+
+    .droit {
+        margin-top: 20px; 
+}
+}
+}
